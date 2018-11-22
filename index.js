@@ -9,9 +9,7 @@ mongoose.connect('mongodb://localhost/vidly')
  .then(() => console.log("Successfully conected to MongoDB..."))
  .catch(err => console.log("Could not connect to MongoDB", err))
 
- app.get('/', (req, res) => {
-    res.send('<h1>Hello world</h1>');
-});
+
 
 app.use(express.json());
 app.use('/api/genres', genres)
